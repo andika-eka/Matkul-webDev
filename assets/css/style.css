@@ -1,0 +1,74 @@
+
+/* NAVBAR >>>>>*/
+.navbar-brand-1 {
+    font-family: 'Press Start 2P';
+    color: rgb(0, 130, 255);
+}
+.nav-item :hover:not(.active){
+    background-color: orange;
+}
+/* <<<<<<NAVBAR*/
+
+
+.jumbotron{
+    background-image: url(../img/ISS.jpg);
+    background-size: cover;
+    color: white;
+}
+
+
+.content {
+    background-color: white;
+    color: black;
+    width: 80%;
+    float: right;
+
+}
+
+@media screen and (max-width:500px) {
+   
+    .content h1{
+        text-align: center;
+    }
+
+    .display-4{
+        text-align: center;
+    }
+
+    .sidebar {padding-top: 15px;}
+    .side a {font-size: 18px;}
+}
+.sidebar {
+    background-color: gray;
+    width: 20%; 
+    position: fixed; 
+    left : 0;
+   
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    text-indent: 10px;
+  }
+  
+  /* Active/current link */
+  .sidebar b {
+    background-color: orange;
+    color: white;
+    display: block;
+    padding: 10px;
+  }
+  .sidebar h3{
+    background-color: #555;
+    color: white;
+    padding: 10px;
+  }
+  
+  /* Links on mouse-over */
+  .sidebar a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+  }
