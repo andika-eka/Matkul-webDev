@@ -1,4 +1,4 @@
-<html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -33,7 +33,7 @@
 
 <body>
     <!-- navbar >>>>-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
         <div class="container">
             <a class="navbar-brand-1" href="#">Website</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -76,6 +76,10 @@
                             <a class="dropdown-item" href="#">link 3</a>
                         </div>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/andika-eka">My github</a>
+                    </li>
+
 
                 </ul>
             </div>
@@ -83,13 +87,13 @@
     </nav>
     <!-- <<<<< navbar -->
 
-    <div class="jumbotron jumbotron-fluid">
+    <div class="jumbotron jumbotron-fluid" style="  padding-top: 100px;">
         <div class="container">
             <h1 class="display-4">Fluid jumbotron</h1>
             <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
         </div>
     </div>
-    
+
     <div class="container">
         <div class="sidebar">
             <b>Menu</b>
@@ -106,26 +110,72 @@
             <a href="#link2">link 3.2</a>
             <a href="#link3">link 3.3</a>
         </div>
+
         <div class=content>
-            <h1>judul 1</h1>
-            <h3>judul 2</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis diam lacus, interdum sit amet justo a,
-                iaculis
-                rutrum enim. Etiam varius leo sed tellus rutrum, in varius massa pharetra. Ut tempor congue mauris, at
-                mattis
-                metus. Sed sit amet tellus eget ipsum malesuada suscipit et et ipsum. Nulla facilisi. Ut egestas finibus
-                efficitur. Quisque dapibus facilisis dui non suscipit. Quisque iaculis nibh feugiat tortor volutpat, et
-                scelerisque eros placerat. Praesent sit amet vestibulum enim, eu aliquet tortor. Quisque accumsan nulla
-                ut
-                porttitor rhoncus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus
-                mus. Vivamus
-                auctor magna purus, vitae aliquet turpis mattis eget. Mauris posuere dui ac sapien fermentum, eu luctus
-                urna bibendum.
-                Nunc cursus diam et tincidunt consectetur.</p>
-        </div>
-    </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card mb-3">
+                        <h5 class="card-header">Featured</h5>
+                        <img src="media/1.jpg" class="card-img-top" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Special title treatment</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
+                            </p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card mb-3">
+                        <h5 class="card-header">Featured</h5>
+                        <img src="media/2.jpg" class="card-img-top" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Special title treatment</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
+                            </p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card mb-3">
+                        <h5 class="card-header">Featured</h5>
+                        <img src="media/3.jpg" class="card-img-top" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Special title treatment</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
+                            </p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card mb-3">
+                        <h5 class="card-header">Featured</h5>
+                        <img src="media/4.jpg" class="card-img-top" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Special title treatment</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
+                            </p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <div class="container-fluid">
+    <footer class="footer ">
+                <div class="container">
+                    <p>contact me :.</p>
+                    <p>E-mail : andikaeka1201@gmail.com</p>
+                    <p>gitHub : https://github.com/andika-eka</p>
+                </div>
+    </footer>
     </div>
 
+        </div>
+    </div>
+   
+   
 </body>
 
 </html>

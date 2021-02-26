@@ -1,19 +1,31 @@
-
 /* NAVBAR >>>>>*/
 .navbar-brand-1 {
     font-family: 'Press Start 2P';
     color: rgb(0, 130, 255);
 }
-.nav-item :hover:not(.active){
+
+.nav-item :hover:not(.current) {
     background-color: orange;
 }
+.nav-item  :active{
+    background-color : rgb(0, 130, 255);
+}
+.dropdown-item :hover{
+    background-color : white;
+}
+.dropdown-item {
+    background-color : whitesmoke;
+}
+
+
 /* <<<<<<NAVBAR*/
 
 
-.jumbotron{
+.jumbotron {
     background-image: url(../img/ISS.jpg);
     background-size: cover;
     color: white;
+  
 }
 
 
@@ -25,25 +37,33 @@
 
 }
 
+
+
 @media screen and (max-width:500px) {
-   
-    .content h1{
+
+    .content h1 {
         text-align: center;
     }
 
-    .display-4{
+    .display-4 {
         text-align: center;
     }
 
-    .sidebar {padding-top: 15px;}
-    .side a {font-size: 18px;}
+    .sidebar {
+        padding-top: 15px;
+    }
+
+    .side a {
+        font-size: 18px;
+    }
 }
+
 .sidebar {
     background-color: gray;
-    width: 20%; 
-    position: fixed; 
-    left : 0;
-   
+    width: 20%;
+    position: fixed;
+    left: 0;
+
 }
 
 .sidebar a {
@@ -52,23 +72,34 @@
     padding: 10px;
     text-decoration: none;
     text-indent: 10px;
-  }
-  
-  /* Active/current link */
-  .sidebar b {
+}
+
+/* Active/current link */
+.sidebar b {
     background-color: orange;
     color: white;
     display: block;
     padding: 10px;
-  }
-  .sidebar h3{
+}
+
+.sidebar h3 {
     background-color: #555;
     color: white;
     padding: 10px;
-  }
-  
-  /* Links on mouse-over */
-  .sidebar a:hover:not(.active) {
+}
+
+/* Links on mouse-over */
+.sidebar a:hover:not(.active) {
     background-color: #555;
     color: white;
-  }
+}
+
+.footer {
+   
+    bottom: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    background-color: #555;
+    color: white;
+}
