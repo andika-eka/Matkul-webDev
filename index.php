@@ -65,17 +65,6 @@
                             <a class="dropdown-item" href="#">link 4</a>
                         </div>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Dropdown 2
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">link 1n</a>
-                            <a class="dropdown-item" href="#">link 2</a>
-                            <a class="dropdown-item" href="#">link 3</a>
-                        </div>
-                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="https://github.com/andika-eka">My github</a>
                     </li>
