@@ -1,3 +1,37 @@
+<?php
+
+//inisialisasi nilai awal
+$f1Input = "0";         
+$f2Input = "0";         
+$nInput = "2";        
+
+$temp = "0";            
+$fn = "";            
+
+
+if (isset($_POST['print'])) {     //button cliked
+
+    $f1Input = $_POST["inputf1"];
+    $f2Input = $_POST["inputf2"];
+    $nInput = $_POST["inputn"];
+
+    //supaya angka pada form tidak ikut berubah
+    $f1 = $f1Input;
+    $f2 = $f2Input;
+    $n = $nInput;
+   
+    //algoritma fibonacci
+    $fn = $f1 . ", " . $f2;
+    for ($i = 0; $i < $n - 2; $i++) {
+        $temp = $f1 + $f2;
+        $f1 = $f2;
+        $f2 = $temp;
+
+        $fn = $fn . ", " . $temp;
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +43,7 @@
     <meta name="owners" content="andika eka" />
     <meta name="keywords" content="test" />
     <meta name="layout" content="main" />
-    <meta http-equiv="refresh" content="10">
+    <!-- <meta http-equiv="refresh" content="10"> -->
     <link rel="stylesheet" href="assets/css/style.css?ver=2.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -69,7 +103,6 @@
                         <a class="nav-link" href="https://github.com/andika-eka">My github</a>
                     </li>
 
-
                 </ul>
             </div>
         </div>
@@ -100,71 +133,62 @@
             <a href="#link3">link 3.3</a>
         </div>
 
-        <div class=content>
-            <div class="row">
-                <div class="col-sm-6">
-                    <div class="card mb-3">
-                        <h5 class="card-header">Featured</h5>
-                        <img src="media/1.jpg" class="card-img-top" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Special title treatment</h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
-                            </p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
+
+
+        <div class="content">
+
+            <h1>Deret fibonacci</h1>
+            <hr>
+            <div class="container">
+                <div class="form-horizontal">
+                    <div class="col-sm-9">
+                        <form method="POST" action="#" class=" form-container">
+                            <p>F<sub>n + 1</sub> = F <sub>n - 1</sub> + F<sub>n </sub></p>
+
+                            <div class="form-group">
+                                <label for="inputf1">F<sub>1</sub> = </label>
+                                <input type="number" class="form-control" value="<?php echo $f1Input; ?>" id="inputf1"
+                                    name="inputf1" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="inputf2">F<sub>2</sub> = </label>
+                                <input type="number" class="form-control" value="<?php echo $f2Input; ?>" id="inputf2"
+                                    name="inputf2" required />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="inputn">n</label>
+                                <input type="number" class="form-control" value="<?php echo $nInput; ?>" id="inputn"
+                                    name="inputn" required />
+                            </div>
+                            <button type="submit" class="btn btn-primary " name="print"> Print </button>
+                            <br >
+                            <div class="form-group">
+                                <h5> <b>deret fibonacci: </b> </h5>
+                                <p> F<sub>n = </sub> <?php echo $fn; ?> </p>
+                            </div>
+
+                        </form>
                     </div>
                 </div>
-                <div class="col-sm-6">
-                    <div class="card mb-3">
-                        <h5 class="card-header">Featured</h5>
-                        <img src="media/2.jpg" class="card-img-top" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Special title treatment</h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
-                            </p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+
+
+                <div class="container-fluid">
+                    <footer class="footer">
+                        <div class="container">
+                            <p>contact me :</p>
+                            <p>E-mail : andikaeka1201@gmail.com</p>
+                            <p>gitHub : https://github.com/andika-eka</p>
                         </div>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="card mb-3">
-                        <h5 class="card-header">Featured</h5>
-                        <img src="media/3.jpg" class="card-img-top" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Special title treatment</h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
-                            </p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="card mb-3">
-                        <h5 class="card-header">Featured</h5>
-                        <img src="media/4.jpg" class="card-img-top" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Special title treatment</h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
-                            </p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
+                    </footer>
                 </div>
             </div>
-             <div class="container-fluid">
-    <footer class="footer ">
-                <div class="container">
-                    <p>contact me :.</p>
-                    <p>E-mail : andikaeka1201@gmail.com</p>
-                    <p>gitHub : https://github.com/andika-eka</p>
-                </div>
-    </footer>
-    </div>
-
         </div>
-    </div>
-   
-   
+
+        <script>
+
+        </script>
+
 </body>
 
 </html>

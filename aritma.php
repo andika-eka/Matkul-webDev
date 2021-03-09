@@ -1,3 +1,37 @@
+<?php
+//inisialisasi nilai awal
+$aInput = "";          
+$bInput = "";            
+$nInput = "";         
+
+$temp = "";           
+$output = "";       
+$Un = "";          
+
+
+if (isset($_POST['print'])) {      //button cliked
+
+    $aInput = $_POST["inputa"];
+    $bInput = $_POST["inputb"];
+    $nInput = $_POST["inputn"];
+
+//supaya angka pada form tidak ikut berubah
+    $a = $aInput;
+    $b = $bInput;
+    $n = $nInput;
+
+    //rumus
+    $Un = $a + ($n - 1) * $b;
+
+    //output
+    for ($i = 0; $i < $n; $i++) {
+        $temp = $a + $i  * $b;
+        $output .= $temp . ", ";
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +43,7 @@
     <meta name="owners" content="andika eka" />
     <meta name="keywords" content="test" />
     <meta name="layout" content="main" />
-    <meta http-equiv="refresh" content="10">
+    <!-- <meta http-equiv="refresh" content="10"> -->
     <link rel="stylesheet" href="assets/css/style.css?ver=2.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -69,7 +103,6 @@
                         <a class="nav-link" href="https://github.com/andika-eka">My github</a>
                     </li>
 
-
                 </ul>
             </div>
         </div>
@@ -100,71 +133,73 @@
             <a href="#link3">link 3.3</a>
         </div>
 
-        <div class=content>
-            <div class="row">
-                <div class="col-sm-6">
-                    <div class="card mb-3">
-                        <h5 class="card-header">Featured</h5>
-                        <img src="media/1.jpg" class="card-img-top" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Special title treatment</h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
-                            </p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
+
+
+        <div class="content">
+
+            <h1>Baris arimatika</h1>
+            <hr>
+
+            <div class="container">
+                <div class="form-horizontal">
+                    <div class="col-sm-9">
+                        <form method="POST" action="#" class="form-container">
+                            <p>U<sub>n</sub> = a + (n -1)b</p>
+                            <p>b = U<sub>n</sub> - U <sub>n-1</sub></p>
+                            <div class="form-group">
+                                <label for="inputa">a = </label>
+                                <input type="number" class="form-control" value="<?php echo $aInput; ?>" id="inputa"
+                                    name="inputa" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="inputb">b =</label>
+                                <input type="number" class="form-control" value="<?php echo $bInput; ?>" id="inputb"
+                                    name="inputb" required />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="input2">n =</label>
+                                <input type="number" class="form-control" value="<?php echo $nInput; ?>" id="inputn"
+                                    name="inputn" required />
+                            </div>
+
+                            <button type="submit" class="btn btn-primary" name="print">
+                                Print
+                            </button>
+
+                            <br />
+                            <div class="form-group">
+                             
+                                <h5> <b>Baris Aritmatika: </b> </h5>
+                                <p> <?php echo $output; ?> </p>
+                                <p> <b> U<sub>n</sub> = </b> <?php echo $Un; ?> </p>
+                            </div>
+
+                           
+
+                        </form>
                     </div>
                 </div>
-                <div class="col-sm-6">
-                    <div class="card mb-3">
-                        <h5 class="card-header">Featured</h5>
-                        <img src="media/2.jpg" class="card-img-top" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Special title treatment</h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
-                            </p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+
+
+
+                <div class="container-fluid">
+                    <footer class="footer">
+                        <div class="container">
+                            <p>contact me :</p>
+                            <p>E-mail : andikaeka1201@gmail.com</p>
+                            <p>gitHub : https://github.com/andika-eka</p>
                         </div>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="card mb-3">
-                        <h5 class="card-header">Featured</h5>
-                        <img src="media/3.jpg" class="card-img-top" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Special title treatment</h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
-                            </p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="card mb-3">
-                        <h5 class="card-header">Featured</h5>
-                        <img src="media/4.jpg" class="card-img-top" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Special title treatment</h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
-                            </p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
+                    </footer>
                 </div>
             </div>
-             <div class="container-fluid">
-    <footer class="footer ">
-                <div class="container">
-                    <p>contact me :.</p>
-                    <p>E-mail : andikaeka1201@gmail.com</p>
-                    <p>gitHub : https://github.com/andika-eka</p>
-                </div>
-    </footer>
-    </div>
-
         </div>
-    </div>
-   
-   
+
+
+        <script>
+
+        </script>
+
 </body>
 
 </html>

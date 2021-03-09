@@ -4,9 +4,10 @@
     color: rgb(0, 130, 255);
 }
 
-.nav-item :hover:not(.current) {
+ .nav-item a :hover:not(.current) {
     background-color: orange;
 }
+/*
 .nav-item  :active{
     background-color : rgb(0, 130, 255);
 }
@@ -15,7 +16,7 @@
 }
 .dropdown-item {
     background-color : whitesmoke;
-}
+} */
 
 
 /* <<<<<<NAVBAR*/
